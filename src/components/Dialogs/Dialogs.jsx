@@ -1,14 +1,10 @@
 import React from "react";
-import {
-  sendMessageCreator,
-  updateMewMessageTextCreator,
-} from "../../redux/dialogs-reducer";
 import s from "./Dialogs.module.css";
 import DialogItem from "./DialogsItem/DialogItem";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
-  let state = props.store.getState().dialogsPage;
+  let state = props.dialogsPage;
 
   let dialogsElements = state.dialogs.map((dialog) => (
     <DialogItem name={dialog.name} id={dialog.id} />
@@ -21,12 +17,12 @@ const Dialogs = (props) => {
   let newMessageText = state.newMessageText;
 
   let onSendMessageClick = () => {
-    props.store.dispatch(sendMessageCreator());
+    props.sendMessage();
   };
 
   let onNewMessageChange = (e) => {
     let newMessageText = e.target.value;
-    props.store.dispatch(updateMewMessageTextCreator(newMessageText));
+    props.updateNewMessageText(newMessageText)
   };
 
   return (
@@ -36,7 +32,7 @@ const Dialogs = (props) => {
         <div>{messagesElements}</div>
         <div>
           <textarea
-            placeHolder="Enter yout email"
+            placeHolder="Enter your email"
             onChange={onNewMessageChange}
             value={newMessageText}
           />
