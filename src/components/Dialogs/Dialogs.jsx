@@ -13,7 +13,7 @@ const Dialogs = (props) => {
   let messagesElements = state.messages.map((message) => (
     <Message message={message.message} />
   ));
-
+ 
   let newMessageText = state.newMessageText;
 
   let onSendMessageClick = () => {
