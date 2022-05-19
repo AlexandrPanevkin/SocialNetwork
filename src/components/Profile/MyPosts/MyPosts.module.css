@@ -1,7 +1,16 @@
 .postBlock {
-  padding: 10px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 .posts {
     margin-top: 10px;
+}
+
+.textarea {
+  padding-left: 10px;
+}
+
+button {
+  margin-left: 120px;
 }

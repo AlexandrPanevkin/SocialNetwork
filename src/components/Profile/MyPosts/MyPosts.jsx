@@ -22,9 +22,9 @@ const MyPosts = (props) => {
   return (
     <div>
       <div className={s.postBlock}>
-        <h3>My posts</h3>
+        <h3>Мои публикации</h3>
       </div>
-      <div>
+      <div className={s.textarea}>
         <textarea
           onChange={onPostChange}
           ref={newPostElement}
@@ -32,7 +32,7 @@ const MyPosts = (props) => {
         />
       </div>
       <div>
-        <button onClick={onAddPost}>Add post</button>
+        <button className={s.button}onClick={onAddPost}>Add post</button>
       </div>
       <div className={s.posts}>{postsElements}</div>
     </div>

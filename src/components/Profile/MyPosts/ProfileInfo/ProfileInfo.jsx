@@ -1,13 +1,15 @@
 import React from "react";
-import s from './ProfileInfo.module.css'
+import s from "./ProfileInfo.module.css";
 
 const Profileinfo = () => {
   return (
-    <div>
-      <div>
-        <img src="https://tinypng.com/images/social/website.jpg" />
-      </div> 
-      <div className={s.descriptionBlock}>ava + discription</div>
+    <div className={s.descriptionBlock}>
+      <div className={s.startImage}>
+        <img src="https://klike.net/uploads/posts/2021-01/1611131113_2.jpg" />
+      </div>
+      <div className={s.description}>
+        <img src="https://klike.net/uploads/posts/2019-03/medium/1551511784_4.jpg" /> Варвара Ивановна
+      </div>
     </div>
   );
 };
