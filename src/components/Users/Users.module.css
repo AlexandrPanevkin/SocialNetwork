@@ -4,3 +4,7 @@
   padding: 20px
 }
 
+.selectedPage, .currentPage {
+  font-weight: bold;
+}
+
