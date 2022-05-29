@@ -6,7 +6,6 @@ const Profileinfo = (props) => {
   if (!props.profile) {
     return <Preloader />;
   }
-  debugger;
   return (
     <div className={s.descriptionBlock}>
       <div className={s.startImage}>
