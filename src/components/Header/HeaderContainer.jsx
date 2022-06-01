@@ -7,12 +7,10 @@ import { connect } from "react-redux";
 class HeaderContainer extends React.Component {
   componentDidMount() {
     axios
-      .get(`https://social-network.samuraijs.com/api/1.0/auth/me`, {
-        withCredentials: true,
-      })
+      .get(`https://social-network.samuraijs.com/api/1.0/auth/me`)
       .then((response) => {
         if (response.data.resultCode === 0) {
-          let { id, email, login, isAuth} = response.data.data;
+          let { id, email, login, isAuth } = response.data.data;
           this.props.setAuthUserData(id, email, login, isAuth);
         }
       });
