@@ -13,7 +13,7 @@ const Profileinfo = (props) => {
         {/* <img src="https://klike.net/uploads/posts/2021-01/1611131113_2.jpg" /> */}
       </div>
       <div className={s.description}>
-        <img src={props.profile.photos.large} /> <ProfileStatus status={'hello'} />
+        <img src={props.profile.photos.large} /> <ProfileStatus status={props.status} />
       </div>
     </div>
   );
