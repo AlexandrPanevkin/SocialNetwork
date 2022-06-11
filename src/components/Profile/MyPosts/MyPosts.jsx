@@ -24,13 +24,13 @@ const MyPosts = (props) => {
       <div className={s.postBlock}>
         <h3>Мои публикации</h3>
       </div>
-      <div className={s.textarea}>
+      <form className={s.textarea}>
         <textarea
           onChange={onPostChange}
           ref={newPostElement}
           value={props.newPostText}
         />
-      </div>
+      </form>
       <div>
         <button className={s.button}onClick={onAddPost}>Add post</button>
       </div>
