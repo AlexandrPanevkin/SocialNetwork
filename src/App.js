@@ -37,7 +37,7 @@ class App extends Component {
             <Route path="/music" element={<Music />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/login" element={<LoginPage />} />
-          </Routes>
+            </Routes>
         </div>
       </div>
     );
@@ -47,5 +47,5 @@ const mapStateToProps = (state) => ({
   initialized: state.app.initialized
 
 })
-export default compose(
+export default compose( 
   connect(mapStateToProps, { initializeApp }))(App);
