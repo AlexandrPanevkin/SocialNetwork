@@ -1,15 +1,24 @@
+.paginator {
+  text-align: center;
+}
+
 .pageNumber {
   padding: 2px;
-  border: 1px solid grey;
+  border: 2px solid grey;
   cursor: pointer;
+  margin: 5px;
+  padding: 5px;
 }
 
 .pageNumber.selectedPage {
   font-weight: bold;
   border-color: black;
+  position: absolute;
+
 }
 
-.next, .prev {
+.next,
+.prev {
   background-color: #3869b3;
   border: none;
   color: white;
@@ -22,4 +31,3 @@
   margin: 10px;
   border-radius: 30px;
 }
-
